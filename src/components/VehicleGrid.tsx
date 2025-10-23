@@ -1,3 +1,4 @@
+import { useState } from "react";
 import VehicleCard from "./VehicleCard";
 import car1 from "@/assets/car-1.jpg";
 import car2 from "@/assets/car-2.jpg";
@@ -5,6 +6,7 @@ import car3 from "@/assets/car-3.jpg";
 import car4 from "@/assets/car-4.jpg";
 
 const VehicleGrid = () => {
+  const [activeTab, setActiveTab] = useState("In Stock");
   const vehicles = [
     {
       image: car1,
@@ -44,6 +46,8 @@ const VehicleGrid = () => {
     },
   ];
 
+  const tabs = ["In Stock", "New Cars", "Used Cars"];
+
   return (
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,6 +58,26 @@ const VehicleGrid = () => {
           <a href="#" className="text-primary hover:underline font-medium">
             View All →
           </a>
+        </div>
+        
+        {/* Tabs */}
+        <div className="flex gap-8 mb-8 border-b border-border">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`pb-3 font-medium transition-colors relative ${
+                activeTab === tab
+                  ? "text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {tab}
+              {activeTab === tab && (
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
+              )}
+            </button>
+          ))}
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

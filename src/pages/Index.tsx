@@ -5,6 +5,7 @@ import VehicleGrid from "@/components/VehicleGrid";
 import StatsSection from "@/components/StatsSection";
 import Features from "@/components/Features";
 import PopularMakes from "@/components/PopularMakes";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
         <Features />
         <PopularMakes />
       </main>
+      <Footer />
     </div>
   );
 };
