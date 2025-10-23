@@ -5,6 +5,9 @@ import VehicleGrid from "@/components/VehicleGrid";
 import StatsSection from "@/components/StatsSection";
 import Features from "@/components/Features";
 import PopularMakes from "@/components/PopularMakes";
+import ShopByWay from "@/components/ShopByWay";
+import Testimonials from "@/components/Testimonials";
+import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -18,6 +21,9 @@ const Index = () => {
         <StatsSection />
         <Features />
         <PopularMakes />
+        <ShopByWay />
+        <Testimonials />
+        <CallToAction />
       </main>
       <Footer />
     </div>

@@ -4,10 +4,10 @@ import statsImage from "@/assets/stats-car.jpg";
 
 const StatsSection = () => {
   const stats = [
-    { value: "235M", label: "Vehicles Listed" },
-    { value: "738M", label: "Happy Customers" },
-    { value: "100M", label: "Dealers" },
-    { value: "235M", label: "Total Sales" }
+    { value: "836M", label: "CARS FOR SALE" },
+    { value: "738M", label: "DEALER REVIEWS" },
+    { value: "100M", label: "VISITORS PER DAY" },
+    { value: "238M", label: "VERIFIED DEALERS" }
   ];
 
   const features = [
